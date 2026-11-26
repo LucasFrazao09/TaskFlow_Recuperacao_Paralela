@@ -13,6 +13,8 @@ $d = [
     $_POST['status'] ?? 'Pendente'
 ];
 
+//To comentando porque acabei comitando no meio de outro chamado, mas a resolução foi alteerar e colocar o sql para buscar o status também, estava sem.
+
 if ($id > 0) {
     $q = $pdo->prepare('UPDATE tarefas SET titulo=?,descricao=?,responsavel=?,categoria=?,prazo=?,prioridade=?,status=? WHERE id=?');
     $q->execute([$d[0], $d[1], $d[2], $d[3], $d[4], $d[5], $d[6], $id]);
